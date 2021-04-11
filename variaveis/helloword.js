@@ -1,5 +1,3 @@
-if(true) {
-  let ab = 5
-  ab = 500
-  console.log(ab)
-  }
+const a = {nome: "Igor"};
+a.nome = "José"
+console.log(a)
