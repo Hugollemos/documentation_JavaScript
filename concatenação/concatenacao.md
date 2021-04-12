@@ -2,6 +2,16 @@
 
 Maneira mais atual de concatenar:
 ```
-console.log(`Minha irade é {} e nasci em {}, cidade {}`)
+console.log(`Minha idade é {} e nasci em {}, cidade {}`)
 ```
-Concatenar é juntar strings com variaveis, os colchetes servem para alocar as variaveis e as crases servem para as strings sem a necessidade de colocar as mesmas em ' ' e separar por vírgula(,).
+Concatenar é juntar strings com variaveis, nesse caso  os colchetes servem para alocar as variaveis e as crases + cifrão servem para as strings sem a necessidade de colocar as mesmas em ' ' e separar por vírgula(,) como seria usado de uma maneira mais "complicada", dessa forma.
+```
+var a = 10
+console.log('tenho',a,'anos de idadde')
+```
+da maneira mais "fácil de concatenar na minha opinião"
+```
+var a = 10
+console.log(`tenho ${a} anos de idade de`)
+
+```
