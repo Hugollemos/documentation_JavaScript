@@ -1,16 +1,14 @@
-# funções conceitos básicos
-funções executam blocos de códigos 
-usar-se a palavra reservada "function" para iniciar uma função
-exeplo:
-
+# funções: conceitos básicos
+>funções executam blocos de códigos, recebem ou não argumentos para os parâmetros os parâmetros. Usar-se a palavra reservada "function" para iniciar uma função.
+Ex:
+```
 function saudacao(nome) {
-  return  `Bora estudar ${nome} minino`;
+  return(`Bom dia ${nome}`)
 }
 
-const variavel = saudacao('hugo');
+let variavel = saudacao('hugo')
 console.log(variavel)
-
-podendo inviar parametros nas fnunções atravez de argumentos  
+```
 # função que retorna uma soma 
 
 function soma (x, y) {
@@ -20,20 +18,20 @@ function soma (x, y) {
 
 console.log(soma(2,4))
 
-# hero functions
-maneira mais mordena de fazer funções 
+>colocar um função dentro de uma variavel, faz com que a função seja, anônima.
 
+#### Arrow Functions: declarar funções encurtadas.
+1. maneira tradicional; 
+```
 const raiz = function (n) {
-  return n ** 0.5;
+  return n ** 0.5; <br>
 }
- 
-const raiz = (n) => {
-  return n ** 0.5
+ ```
+ 2. maneira mais mordena de fazer funções 
+ ```
+const raiz = (n) => { 
+  return n ** 0.5 <br>
 }
 console.log(raiz(9));
-
-const raiz = n => n ** 0.5;
-
-const raiz = function (n) => {
-** 0.5;
-} 
+```
+```const raiz = n => n ** 0.5;```
