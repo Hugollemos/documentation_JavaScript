@@ -1,20 +1,13 @@
-# array serve para guarda coisas é uma lista de coisas
+# arrays
+ >serve para guarda valores em uma única variável, uma "lista de coisas". [ ]
 
-para usar arrays declare uma variavel e adicione as "coisa" pelas chaves separadas por virgula ,pode ser usar números, strings boleannos e etc
+Ex: ``` const alunos = ['Hugo', 'elon', 'bill']; ```
 
-alunos.length para ver o tamanho de todos os  arrays
+>cada Array é indexado , para acessar algum array usar-se: console.log(alunos[n])
 
-# para criar arrays const[proximo indice] = 'nome';
-
-var.push('array) para add mais um array
-
-caso eu queira adicionar um array no começo da lista de array, devo usar var.unshift('nome no array');
-
-para remover arrays no final
-console.log(var.pop())
-
-para remover o primeiro 
-var.shift()
-
-para deletar um array
-delete var[1] fica vazil
+tamanho do array: ```alunos.length``` <br>
+para retirar um array do final: ``` alunos.pop();``` <br>
+para adicionar um array no final: ``` alunos.push('nome');``` <br>
+para adicionar um array no começo: ``` alunos.unshift('nome')```
+Fatiar: selecionar um grupo de arrays específicos 
+``` console.log(alunos.slice(0,2))```
