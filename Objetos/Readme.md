@@ -1,5 +1,20 @@
-# Objetos 
+# Objetos: conceitos básicos
+>Objetos Servem para juntar varias dados e acessá-los por sua propriedade. Usar chaves para criar um objeto { }.
+Ex:
+```
+let nome = 'Rrafael';
+let idade = 25;
+let estaAprovado = true;
+let sobrenome = undefined
 
-cosnt array = [1,2,3];
-não posso rearibuir , mas posso modificar
-array.push(4);
+Criando um Objeto---------------
+
+let pessoa = {
+  nome: 'Rafael',
+  idade: 25,
+  estaAprovado: true,
+  sobrenome: 'de Souza'
+};
+
+console.log(pessoa);
+```
