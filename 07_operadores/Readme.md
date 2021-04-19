@@ -15,3 +15,9 @@
 || -> OR -> OU -> Se uma espressão for negativa outra assumirá como verdadeira 
 ! -> NOT -> NÃO -> inverte o valor da espressão 
 ```
+## Operadores ternários:
+```
+const pontuacaoUsuario = 1000;
+const nivelUsuario = pontuacaoUsuario >= 1000 ? 'Usuário VIP' : 'Usuário normal';
+console.log(nivelUsuario)
+```
