@@ -5,6 +5,8 @@ Ex: ``` const alunos = ['Hugo', 'elon', 'bill']; ```
 
 >cada Array é indexado , para acessar algum array usar-se: console.log(alunos[n])
 
+Separa os arrays: ```alunos.join:```
+tira uma parte do array "fatia": ```alunos.slice()```
 tamanho do array: ```alunos.length``` <br>
 para retirar um array do final: ``` alunos.pop();``` <br>
 para adicionar um array no final: ``` alunos.push('nome');``` <br>
