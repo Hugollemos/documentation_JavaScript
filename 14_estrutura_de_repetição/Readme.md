@@ -80,3 +80,8 @@ O comando “break” serve para encerrar a leitura. O break é um comando que p
 CONTINUE:
 Com este comando, é possível iniciar a próxima repetição do loop. 
 Com a instrução continue, você poderá utilizá-la para apenas ignorar  uma iteração de loop.
+
+# setInterval e setTimeout
+
+>setInterval:  executa o comando em tempos em tempos 
+>setTimeout: executa o comando uma vez 
