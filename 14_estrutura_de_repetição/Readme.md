@@ -68,10 +68,10 @@ while (contador <= 5) {
 }
 ```
 // ou
->executa primeiro o código para depois chegar a condição
+>executa primeiro o código para depois checar a condição
 
 do
-  instrucao
+  instrucao <br>
 while (expressao)
 
 BREAK:
