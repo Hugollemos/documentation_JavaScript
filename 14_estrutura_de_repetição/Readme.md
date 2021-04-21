@@ -73,3 +73,10 @@ while (contador <= 5) {
 do
   instrucao
 while (expressao)
+
+BREAK:
+O comando “break” serve para encerrar a leitura. O break é um comando que podemos utilizar quando queremos parar/encerrar o laço de repetição na hora.
+
+CONTINUE:
+Com este comando, é possível iniciar a próxima repetição do loop. 
+Com a instrução continue, você poderá utilizá-la para apenas ignorar  uma iteração de loop.
