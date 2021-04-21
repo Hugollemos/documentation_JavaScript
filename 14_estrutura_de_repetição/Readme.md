@@ -56,3 +56,12 @@ for (let valor of nome) {
   console.log(valor);
 }
 ```
+# while e do while
+while (expressao)
+  instrucao
+
+// ou
+executa primeiro o código para depois chegar a condição
+do
+  instrucao
+while (expressao)
