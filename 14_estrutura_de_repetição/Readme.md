@@ -57,11 +57,19 @@ for (let valor of nome) {
 }
 ```
 # while e do while
+```
 while (expressao)
   instrucao
 
+var contador = 0;
+while (contador <= 5) {
+  console.log(contador);
+  ++contador;
+}
+```
 // ou
-executa primeiro o código para depois chegar a condição
+>executa primeiro o código para depois chegar a condição
+
 do
   instrucao
 while (expressao)
