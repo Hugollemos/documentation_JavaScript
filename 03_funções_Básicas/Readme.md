@@ -9,7 +9,7 @@ function saudacao(nome) {
 let variavel = saudacao('hugo')
 console.log(variavel)
 ```
-# Função de soma, mandando argumentos para o parametrô da função
+# Função que retorna uma soma, mandando argumentos para o parametrô da função
 
 function soma (x, y) {
   const resultado = x + y;
@@ -48,13 +48,16 @@ Ex: var subtrai3numb = function (a, b, c) {
 }
 console.log(subtrai3numb(15, 3, 5));
 
-#Funções de callback
+# Funções de callback
 Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação
 
-Ex: function somaCallback(a,b, fncallback) {
+Ex: 
+```
+function somaCallback(a,b, fncallback) {
   return fncallback(a+b);
 }
 
 console.log(somacallback(10,3, function(total){
   return total * 2;
 }));
+```
