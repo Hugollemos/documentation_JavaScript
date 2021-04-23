@@ -83,5 +83,5 @@ Com a instrução continue, você poderá utilizá-la para apenas ignorar  uma i
 
 # setInterval e setTimeout
 
->setInterval:  executa o comando em tempos em tempos 
+>setInterval:  executa o comando em tempos em tempos <br>
 >setTimeout: executa o comando uma vez 
