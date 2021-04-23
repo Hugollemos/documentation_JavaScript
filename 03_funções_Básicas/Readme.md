@@ -9,7 +9,7 @@ function saudacao(nome) {
 let variavel = saudacao('hugo')
 console.log(variavel)
 ```
-# função que retorna uma soma 
+# Função de soma, mandando argumentos para o parametrô da função
 
 function soma (x, y) {
   const resultado = x + y;
@@ -35,3 +35,26 @@ const raiz = (n) => {
 console.log(raiz(9));
 ```
 ```const raiz = n => n ** 0.5;```
+
+# função auto-executável
+
+(function autoExecuta() {
+  console.log('Executei');
+}());
+
+>Função anônima é uma função sem nome
+Ex: var subtrai3numb = function (a, b, c) {
+  return a- b -;
+}
+console.log(subtrai3numb(15, 3, 5));
+
+#Funções de callback
+Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação
+
+Ex: function somaCallback(a,b, fncallback) {
+  return fncallback(a+b);
+}
+
+console.log(somacallback(10,3, function(total){
+  return total * 2;
+}));
