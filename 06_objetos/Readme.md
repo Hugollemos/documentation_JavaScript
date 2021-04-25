@@ -79,7 +79,7 @@ As classes JavaScript contam com dois métodos especiais: um com o prefixo get q
 ### 10. destructuring
 
 ### Extraindo valores de objeto e armazenando em variavel:
-da forma tradicional
+*Forma tradicional:*
 ```
 var usuario = {
   nome: 'hugo',
@@ -90,11 +90,13 @@ var usuario = {
 var nome = usuario.nome;
 var idade = usuario.idade;
 ```
-maneira mais curta 
+*maneira mais curta:*
+```
 var {idade, nome} = usuario;
 console.log(idade, nome);
-
+```
 extraindo a propriedade e armazenando em outra variavel
+```
 var {nome: segundoNome} = usuario;
 console.log(segundoNome);
 
@@ -107,7 +109,7 @@ var novoUsuario2 = {
 
 var {nome: {primeiro}} = novoUsuario2;
 console.log(primeiro);
-
+```
 
 # Destructuring com default value
 
