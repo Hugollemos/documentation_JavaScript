@@ -28,12 +28,14 @@ para imprimir precisa-se colocar entre conchetes e aspas.
 ```delete pessoa.idade;```
 
 ### 5. maneira mais curta de criar uma função dentro de um objeto:
+Ex:
 ```
 digaoi(name) {
   return `olá ${name}`; 
 }
 ```
 ### 6. maneira mais curta para declarar o valor de uma variavel dentro de um objeto sem precisar declarar a chave.
+Ex:
 ```
 var cor = 'azul';
 
@@ -66,6 +68,7 @@ object.assign(,usuario4, usuario3);
 ### 8. spreader
 
 *mesma coisa do object.assign()*
+Ex:
 ```
 var novouser = {
   ...usuario4,
@@ -78,8 +81,9 @@ console.log(novouser)
 As classes JavaScript contam com dois métodos especiais: um com o prefixo get que tem a função de retornar um valor, e outro precedido pela palavra set que serve para atribuir um valor.
 ### 10. destructuring
 
-### Extraindo valores de objeto e armazenando em variavel:
+### Extraindo valores do objeto e armazenando em uma variavel:
 *Forma tradicional:*
+Ex:
 ```
 var usuario = {
   nome: 'hugo',
@@ -91,15 +95,20 @@ var nome = usuario.nome;
 var idade = usuario.idade;
 ```
 *maneira mais curta:*
+Ex:
 ```
 var {idade, nome} = usuario;
 console.log(idade, nome);
 ```
-extraindo a propriedade e armazenando em outra variavel
+>10.1 extraindo a propriedade nome do novoUsuario2 e armazenando na variavel segundoNome.
+Ex:
 ```
 var {nome: segundoNome} = usuario;
 console.log(segundoNome);
-
+```
+>10.2 Extraindo o valor de um objeto que está dentro de dois objetos
+Ex:
+```
 var novoUsuario2 = {
   nome: {
     primeiro: 'hugo',
@@ -111,21 +120,22 @@ var {nome: {primeiro}} = novoUsuario2;
 console.log(primeiro);
 ```
 
-# Destructuring com default value
-
+### 11. Destructuring com default value
+Deixando um valor já pre-definido caso não tenha na propriedade do objeto.
+Ex:
+```
 var novoUsuario2 = {
   nome: {
-    primeiro: 'hugo',
-    
+  primeiro: 'hugo',
   }
 };
 var {nome: {ultimo = 'lemos'}} = novoUsuario2;
 console.log(ultimo);
+```
 
-pra deixar um valor já pre definido caso eu não tenho achado a propriedade no objeto
-
-Destructuring como parâmetro de function
-
+### 12. Destructuring como parâmetro de function
+Ex:
+```
 function imprimir (valor) {
    console.log(usuario.nome);
    console.log(usuario.idade);
@@ -154,8 +164,8 @@ var usuario = {
 }
 
 imprimir(usuario);
-
-Object.keys e Objects.values
+```
+### 13. Object.keys e Objects.values.
 Devolve um array com todas as chaves de um objeto
 console.log(Object.keys(usuario));
 
