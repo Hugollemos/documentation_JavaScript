@@ -61,3 +61,33 @@ console.log(somacallback(10,3, function(total){
   return total * 2;
 }));
 ```
+
+# função de callback
+
+function somaCallback(a, b, fnCallback) {
+  return fnCallback(a + b);
+}
+
+console.log(somaCallback(10, 3, function(total) {
+  return total * 2;
+}));
+
+# não passando argumentos para afunção 
+```
+function escreveNome(nome,idade) {
+  console.log(nome);
+  console.log(idade)
+}
+
+escreveNome();
+``` 
+### não passando argumentos, o valor retornado sera "undefined", mas é possivel deixar o valor padão pre-definido dentro de parametrôs, como se estivesse passado argumentos, dessa forma:
+Ex:
+```
+function escreveNome(nome = 'Hugo',idade = '21') {
+  console.log(nome);
+  console.log(idade)
+}
+
+escreveNome();
+```
