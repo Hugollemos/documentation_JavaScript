@@ -33,7 +33,7 @@ digaoi(name) {
   return `olá ${name}`; 
 }
 ```
-### 6.maneira mais curta para declarar o valor de uma variavel dentro de um objeto sem precisar declarar a chave.
+### 6. maneira mais curta para declarar o valor de uma variavel dentro de um objeto sem precisar declarar a chave.
 ```
 var cor = 'azul';
 
@@ -42,32 +42,41 @@ var usuario03 = {
   cor 
 }
 ```
-criando um novo objeto ou alterando um que ja exista
+### 7. object.assign()
+Criando um novo objeto ou alterando um que já exista, a apartir de outros objetos.
 
-object.assign()
-
-passando {} vazias, diz quer dizer quer criar um objeto novo, no segundo parametrô falo qual objetos quero juntarr
+passando {} vazias para criar um objeto novo. <br>
+Ex:
+```
 var novoUsuario = object.assign({},usuario4, usuario3);
+```
 
-jogando um objeto dentro de outro, é so não colocar as chacves {}, o objeto alvo sera usuario4,
-caso eu queira colocar os atributos de um objeto dentro de outro objeto
+>No segundo parametrô qual objetos quero fazer merge. <br>
+Ex:
+```
+var novoUsuario = object.assign({},usuario4, usuario3);
+```
+
+>jogando um objeto dentro de outro. <br>
+```
 object.assign(,usuario4, usuario3);
-Existe uma forma mais curta de fazer isso, com o spreader
-forma mais curta de fazer merjer com objetos 
->spreader
-vai espelhar as proprieddes dos objetos para demntro do objeto novouser
-mesca coisa do object.assign()
+```
+>Forma mais curta de fazer isso, com o spreader, fazer merjer com objetos.
 
+### 8. spreader
+
+*mesma coisa do object.assign()*
+```
 var novouser = {
   ...usuario4,
   ...estrainfo
 };
-console.log('novouser)
-
-# getters e setters
+console.log(novouser)
+```
+### 9. getters e setters
 
 As classes JavaScript contam com dois métodos especiais: um com o prefixo get que tem a função de retornar um valor, e outro precedido pela palavra set que serve para atribuir um valor.
- # destructuring
+### 10. destructuring
 # para armazenar valores de chaves de um objeto em uma variavel(extraindo seus valores)
 
 var usuario = {
