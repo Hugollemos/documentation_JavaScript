@@ -1,5 +1,5 @@
-# Objetos: conceitos básicos
->Objetos: permitem juntar varias valores e acessá-los por sua propriedade, podendo passar "qualquer valor". <br>
+# Objetos:
+>Objetos: permitem juntar varios valores e acessá-los por sua propriedade, podendo passar "qualquer valor". <br>
 >Usar chaves para criar um objeto { }. <br>
 Ex:
 ```
@@ -12,22 +12,20 @@ let pessoa = {
 
 console.log(pessoa);
 ```
-Acessando os valores dentro do objeto individualmene:
+### 1. Acessando os valores dentro do objeto individualmene:
 
 ```console.log(pessoa.nome);```
 
-```console.log(pessoa['nome']);```
-criando uma chave separada por hifen ```ultimo-nome```, precisa-se ser colocada entre aspas```'ultimo-nome'```
-para imprimir precisa-se colocar entre conchetes e aspas
-```console.log(usuario.['ultimo-nome']);
-----
+```console.log(pessoa['nome']);``` <br>
+### 2. criando uma chave separada por hifen ```ultimo-nome```, precisa-se ser colocada entre aspas ```'ultimo-nome'``` <br>
+para imprimir precisa-se colocar entre conchetes e aspas.
+```console.log(usuario.['ultimo-nome']);```
 
+### 2. Adicionando uma nova variavel
+```pessoa.ano = 2021```
 
-caso eu queira add uma nova prorpriedade no meu objeto
-pessoa.ano = 2021
---
-para apagar uma propriedade
-delete pessoa.idade;
+### 3. Apagando uma propriedade
+```delete pessoa.idade;```
 
 maneira mais curta de criar uma função dentro de um objeto:
 
