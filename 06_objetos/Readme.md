@@ -77,18 +77,20 @@ console.log(novouser)
 
 As classes JavaScript contam com dois métodos especiais: um com o prefixo get que tem a função de retornar um valor, e outro precedido pela palavra set que serve para atribuir um valor.
 ### 10. destructuring
-# para armazenar valores de chaves de um objeto em uma variavel(extraindo seus valores)
 
+### Extraindo valores de objeto e armazenando em variavel:
+da forma tradicional
+```
 var usuario = {
   nome: 'hugo',
   idade: 21,
   pais: 'Brasil'
 };
-da forma tradicional
+
 var nome = usuario.nome;
 var idade = usuario.idade;
+```
 maneira mais curta 
-
 var {idade, nome} = usuario;
 console.log(idade, nome);
 
