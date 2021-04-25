@@ -21,25 +21,27 @@ console.log(pessoa);
 para imprimir precisa-se colocar entre conchetes e aspas.
 ```console.log(usuario.['ultimo-nome']);```
 
-### 2. Adicionando uma nova variavel
+### 3. Adicionando uma nova variavel
 ```pessoa.ano = 2021```
 
-### 3. Apagando uma propriedade
+### 4. Apagando uma propriedade
 ```delete pessoa.idade;```
 
-maneira mais curta de criar uma função dentro de um objeto:
-
+### 5. maneira mais curta de criar uma função dentro de um objeto:
+```
 digaoi(name) {
   return `olá ${name}`; 
 }
-
-maneira mais curta de declarar o valor de uma variavel dentro de um objeto sem precisar declarar uma chave e deixa-la redundante caso o nome da variavel seja iqual a uma propriedade do objewto, o valor da variavel cor sera armazenada na propriedade cor do objeto
+```
+### 6.maneira mais curta para declarar o valor de uma variavel dentro de um objeto sem precisar declarar a chave.
+```
 var cor = 'azul';
 
 var usuario03 = {
   nome: 'hugo',
   cor 
 }
+```
 criando um novo objeto ou alterando um que ja exista
 
 object.assign()
