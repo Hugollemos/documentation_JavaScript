@@ -37,19 +37,19 @@ console.log(raiz(9));
 ```const raiz = n => n ** 0.5;```
 
 # função auto-executável
-
+>Função anônima é uma função sem nome
+```
 (function autoExecuta() {
   console.log('Executei');
 }());
 
->Função anônima é uma função sem nome
 Ex: var subtrai3numb = function (a, b, c) {
   return a- b -;
 }
 console.log(subtrai3numb(15, 3, 5));
-
+```
 # Funções de callback
-Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação
+Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação.
 
 Ex: 
 ```
@@ -62,17 +62,8 @@ console.log(somacallback(10,3, function(total){
 }));
 ```
 
-# função de callback
-
-function somaCallback(a, b, fnCallback) {
-  return fnCallback(a + b);
-}
-
-console.log(somaCallback(10, 3, function(total) {
-  return total * 2;
-}));
-
-# não passando argumentos para afunção 
+Ex:
+### não passando argumentos para afunção 
 ```
 function escreveNome(nome,idade) {
   console.log(nome);
@@ -81,7 +72,9 @@ function escreveNome(nome,idade) {
 
 escreveNome();
 ``` 
-### não passando argumentos, o valor retornado sera "undefined", mas é possivel deixar o valor padão pre-definido dentro de parametrôs, como se estivesse passado argumentos, dessa forma:
+## Argumentos
+>ão passando argumentos, o valor retornado sera "undefined", mas é possivel deixar o valor padão pre-definido dentro de parametrôs, como se estivesse passado argumentos, dessa forma:
+
 Ex:
 ```
 function escreveNome(nome = 'Hugo',idade = '21') {
@@ -91,3 +84,29 @@ function escreveNome(nome = 'Hugo',idade = '21') {
 
 escreveNome();
 ```
+
+# Fábrica de funções 
+>Em JavaScript, qualquer função pode retornar um objeto. Mas, quando isso acontece sem o new, é uma função de fábrica. Ou seja, quando uma função não é uma classe ou um construtor, é uma função fábrica.
+
+# Função Construtora
+>Um construtor é basicamente uma função. Ela pode ser executada como uma função ou pode ser utilizada para instanciar um objeto utilizando a palavra reservada new.
+
+# função recursiva 
+>Uma função recursiva é uma função que chama a si mesma até encontrar uma instrução de parar. Essa técnica é chamada de recursão. <br>
+
+Ex: 
+```
+function recursiva(max) {
+  console.log(max);
+  if (max >= 10) return;
+  max++;
+  recursiva(max);
+}
+
+recursiva(-10);
+```
+# Funções geradoras
+
+```
+
+
