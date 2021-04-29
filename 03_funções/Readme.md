@@ -107,6 +107,7 @@ recursiva(-10);
 ```
 # Funções geradoras
 
-```
+>Geradores são funções cuja execução pode ser interrompida e posteriormente reconduzida. Seus contextos (de associações de variáveis) ficarão salvos entre cada recondução.
 
+>A palavra-chave yield é usada para pausar e resumir uma generator function (function* or generator function legada).
 

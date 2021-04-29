@@ -1,5 +1,5 @@
 # arrays
- >serve para guarda valores em uma única variável, uma "lista de coisas". [ ]
+ >serve para guarda valores em uma única variável, uma "lista de coisas". new array / []
 
 Ex: ``` const alunos = ['Hugo', 'elon', 'bill']; ```
 

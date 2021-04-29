@@ -68,12 +68,12 @@ while (contador <= 5) {
 }
 ```
 // ou
->executa primeiro o código para depois checar a condição
 
 do
   instrucao <br>
 while (expressao)
 
+>executa primeiro o código para depois checar a condição
 BREAK:
 O comando “break” serve para encerrar a leitura. O break é um comando que podemos utilizar quando queremos parar/encerrar o laço de repetição na hora.
 
