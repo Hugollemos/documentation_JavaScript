@@ -50,7 +50,7 @@ console.log(nomes);
 ```
 # fillter, map, reduce 
 
-# Filter Filtrando o array
+### Filter - Filtrando o array
 Ex:
 ```
 const numeros = [5, 10, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
@@ -63,23 +63,28 @@ const numeros02 = numeros.filter(CallbackFilter);
 console.log(numeros02);
 ```
 # Map - Mapeando o array
+Ex:
+```
 const numeros = [5, 10, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
 
 const numerosEmDobro = numeros.map(function(valor) {
   return valor * 2;
 });
 console.log(numerosEmDobro);
-
+```
 # Reduce - Reduzindo o array
-
+Ex:
+```
 const numeros = [5, 10, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
 const total = numeros.reduce(function(acumulador, valor, indice, array){
   acumulador += valor;
   return acumulador;
 }, 0);
 console.log(total);
-
-# forEach
+```
+# ForEach
+Ex:
+```
 >somente interação 
 const a1 = [10, 20, 30];
 let total = 0;
@@ -89,3 +94,4 @@ a1.forEach(valor => {
 });
 
 console.log(total);
+```
