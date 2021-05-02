@@ -1,23 +1,16 @@
 # Tratando e lançando erros com: try, catch, finally.
+>Esplicação resumida: O erro é gerado dentro (try) e passada por (catch) no catch o erro é tratado.
 
-rotinas que trata erros, dando um feeedback sobre o possivel erro
+>independente se ocorrer erro o finally é executado.
 
-O erro é gerado dentro (try) e passada por (catch) no catch o erro é tratado.
+>Usando o throw, abro uma exceção para um novo erro ```throw new error()```  <br>
+<b>Estrutura básica de erro</b>
 
-independente se ocorra erro o finally via ser executado
-
-usando o throw, abro uma ecessao para um novo erro throw new error
-Estrutura básica de erro
 ```
-try {
   console.loj('Treinando js')
 }catch(e) {
   console.log('erro');
+} finally {
+  console.log('escrita errada')
 }
 ```
-
-try { //É Executado quando não há erros
-} catch(e) { //é executado quando há erros 
-} finally {
-  //sempre
-}
