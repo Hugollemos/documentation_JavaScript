@@ -91,6 +91,11 @@ escreveNome();
 # Função Construtora
 >Um construtor é basicamente uma função. Ela pode ser executada como uma função ou pode ser utilizada para instanciar um objeto utilizando a palavra reservada new.
 
+Ex:
+```
+const soma=new Function("n1,n2","return n1 + n2")
+console.log(soma(8,2))
+```
 # função recursiva 
 >Uma função recursiva é uma função que chama a si mesma até encontrar uma instrução de parar. Essa técnica é chamada de recursão. <br>
 
@@ -108,6 +113,21 @@ recursiva(-10);
 # Funções geradoras
 
 >Geradores são funções cuja execução pode ser interrompida e posteriormente reconduzida. Seus contextos (de associações de variáveis) ficarão salvos entre cada recondução.
+
+Ex:
+```
+function* cont(n){
+  let c=0
+  while(c<n){
+    console.log(c)
+    c++
+  }
+}
+
+const ct=cont(10)
+
+console.log(ct.next())
+```
 
 >A palavra-chave yield é usada para pausar e resumir uma generator function (function* or generator function legada).
 

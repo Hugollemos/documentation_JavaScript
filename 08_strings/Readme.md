@@ -52,3 +52,27 @@ quero saber a posição espesifica entre posições:
 ```
 console.log(string.slice(2,6));
 ```
+### startsWith
+caso comece com o valor indicado;
+Ex:
+```
+let curso="Estudo"
+let c = "c"
+console.log(curso.startsWith(c) ? "verdadeiro" : "falso")
+```
+### endsWith
+caso termine com o valor indicado;
+Ex:
+```
+let curso="Estudo"
+let c = "o"
+console.log(curso.endsWith(c) ? "verdadeiro" : "falso")
+```
+### includes 
+verefica se o termo está na função;
+Ex: 
+```
+let curso="Estudo"
+let c = "tu"
+console.log(curso.includes(c) ? "verdadeiro" : "falso")
+```

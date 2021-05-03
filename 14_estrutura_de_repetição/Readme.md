@@ -11,6 +11,7 @@ for (let i = 0; i <= 10; i++) {
 ```
 ## 2. For in 
 > Retorna o índice ou chave (string, array ou objetos)
+> percorrer atributos de um objeto
 
 Ex:
 >para ter as chaves
@@ -48,6 +49,7 @@ idade 30
 ```
 
 ## 3. For of
+>percorrer arrays
 > Retorna  valor em si (iteráveis, arrays ou strings)
 ```
 const nome = 'Hugo Lemos'
@@ -57,6 +59,8 @@ for (let valor of nome) {
 }
 ```
 # while e do while
+<b>while</b>
+
 ```
 while (expressao)
   instrucao
@@ -67,13 +71,16 @@ while (contador <= 5) {
   ++contador;
 }
 ```
-// ou
+<b>do while</b>
+>Executa primeiro o código para depois checar a condição.
 
-do
-  instrucao <br>
-while (expressao)
-
->executa primeiro o código para depois checar a condição
+```
+var contador = 0;
+do { 
+  console.log('contador');
+  contador++;
+}while (contador<10);
+```
 BREAK:
 O comando “break” serve para encerrar a leitura. O break é um comando que podemos utilizar quando queremos parar/encerrar o laço de repetição na hora.
 
@@ -83,5 +90,10 @@ Com a instrução continue, você poderá utilizá-la para apenas ignorar  uma i
 
 # setInterval e setTimeout
 
->setInterval:  executa o comando em tempos em tempos <br>
->setTimeout: executa o comando uma vez 
+>setInterval: Repete a função enquanto o intervalo existir.
+Ex:
+
+function iniciar(){
+  tmp=setInterval(mudacor,1000);
+}
+>setTimeout: faz a chamada da função em tempo especificado.

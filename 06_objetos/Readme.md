@@ -166,8 +166,31 @@ var usuario = {
 imprimir(usuario);
 ```
 ### 13. Object.keys e Objects.values.
-Devolve um array com todas as chaves de um objeto
-console.log(Object.keys(usuario));
+>Devolve um array com todas as chaves de um objeto
+```console.log(Object.keys(usuario));```
 
-console.log(Object.values(usuario));
 imprimi somente os valores do objeto
+```console.log(Object.values(usuario));```
+
+###  Object.defineProperty() e Object.defineProperties()
+Ex:
+```
+function Produto(nome, preco, estoque) {
+  this.nome = nome;
+  this.preco = preco;
+
+  Object.defineProperty(this, 'estoque', {
+    enumerable: true,
+    value: estoque,
+    writable: true,
+    configurable: true
+  });
+}
+
+const p1 = new Produto('camiseta', 20, 3);
+console.log(Object.keys(p1));
+
+for(let chave in p1) {
+  console.log(chave);
+}
+```

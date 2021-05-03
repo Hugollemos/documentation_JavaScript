@@ -1,8 +1,8 @@
 ## Objeto Date
 >permite trabalhar com datas e horas
 >para usar a função Date/constutora precisa adicionar "new" na frente do date assim:
+Ex:
 ```
-ex:
 const data = new Date();
 console.log(data.toString());
 ```
