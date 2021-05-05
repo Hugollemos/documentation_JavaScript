@@ -173,7 +173,7 @@ imprimi somente os valores do objeto
 ```console.log(Object.values(usuario));```
 
 ###  Object.defineProperty() e Object.defineProperties()
-Ex:
+> define uma nova propriedade diretamente em um objeto, ou modifica uma propriedade já existente em um objeto, e retorna o objeto.
 ```
 function Produto(nome, preco, estoque) {
   this.nome = nome;
