@@ -167,7 +167,7 @@ function Usuario() {
 
 Usuario {}
 ```
-## call
+# call
 O método call() é uma função capaz de alterar o valor this. Por padrão, o primeiro parâmetro que recebe o valor do this e o demais parâmetros são da função que invoca o método Call.
 Ex:
 ```
