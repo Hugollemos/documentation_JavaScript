@@ -49,17 +49,17 @@ Ex: var subtrai3numb = function (a, b, c) {
 console.log(subtrai3numb(15, 3, 5));
 ```
 # Funções de callback
-Uma função callback é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação.
+Uma função callback é uma função passada a outra função como parametrô, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação.
 
 Ex: 
 ```
-function somaCallback(a,b, fncallback) {
-  return fncallback(a+b);
+function exibeMensagensNaOrdem(mensagem, callback) {
+	console.log(mensagem);
+	callback();
 }
-
-console.log(somacallback(10,3, function(total){
-  return total * 2;
-}));
+exibeMensagensNaOrdem('Essa é a primeira mensagem exibida na ordem', function() {
+	console.log('Essa é a segunda mensagem exibida na ordem');
+});
 ```
 
 Ex:
@@ -71,6 +71,26 @@ function escreveNome(nome,idade) {
 }
 
 escreveNome();
+``` 
+# Funções imediatas (IIFE)
+>“Immediately-invoked function expression”.
+Ex:
+```
+(function(idade, peso, altura) {
+
+  const sobrenome = 'Miranda';
+  function criaNome(nome) {
+    return nome + ' ' + sobrenome;
+  }
+
+  function falaNome() {
+    console.log(criaNome('Luiz'))
+  }
+
+  falaNome();
+  console.log(idade, peso, altura);
+
+})(30, 80, 1.80);
 ``` 
 ## Argumentos
 >ão passando argumentos, o valor retornado sera "undefined", mas é possivel deixar o valor padão pre-definido dentro de parametrôs, como se estivesse passado argumentos, dessa forma:
@@ -86,11 +106,33 @@ escreveNome();
 ```
 
 # Fábrica de funções 
->Em JavaScript, qualquer função pode retornar um objeto. Mas, quando isso acontece sem o new, é uma função de fábrica. Ou seja, quando uma função não é uma classe ou um construtor, é uma função fábrica.
+> função que retorna objetos
 
+>OBS: método função que esta dentro do objeto 
+Ex:
+```
+function criaPessoa(nome, sobrenome) {
+  return {
+    nome,
+    sobrenome,
+    fala: function(assunto) {
+      return `${nome} está ${assunto}.`;
+    },
+  };
+}
+
+const p1 = criaPessoa('Luiz', 'Otávio');
+console.log(p1.fala('falando sobre JS'));
+```
 # Função Construtora
+
+>A diferença básica é que uma função construtora é usada com a new palavra - chave (que faz com que o JavaScript crie automaticamente um novo objeto.
+
+>defina this dentro da função para esse objeto e retorne o objeto):
+
 >Um construtor é basicamente uma função. Ela pode ser executada como uma função ou pode ser utilizada para instanciar um objeto utilizando a palavra reservada new.
 
+> OBS: começa com letra maiscula
 Ex:
 ```
 const soma=new Function("n1,n2","return n1 + n2")
