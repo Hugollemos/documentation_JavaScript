@@ -194,3 +194,13 @@ for(let chave in p1) {
   console.log(chave);
 }
 ```
+
+```Object.values``` (retorna um array cujos elementos são os valores das propriedades enumeradas encontradas no objeto.<br>
+```Object.entries``` (retorna um array cujos elementos são também arrays correspondentes aos pares de propriedades [key, value] enumeráveis encontrados diretamente sobre o objeto.<br>
+```Object.assign(des, any)``` (é usado para copiar os valores de todas as propriedades próprias enumeráveis de um ou mais objetos de origem para um objeto destino.) <br>
+```Object.getOwnpropertyDescriptor(o, 'prop')``` ( retorna um descritor de propriedades para uma propriedade (isto é, uma diretamente presente, e não pertencente ao objeto por força da cadeia de protótipo do objeto) de um dado objeto.)
+
+```Object.keys``` (retorna as chaves) <br>
+```Object.freeze``` (congela o objeto)<br>
+```Object.definePrperties``` (define várias propriedades) <br>
+```Obeject.defineProperty``` (define uma propriedade)
