@@ -285,17 +285,15 @@ recursiva(-10);
 
 Ex:
 ```
-function* cont(n){
-  let c=0
-  while(c<n){
-    console.log(c)
-    c++
-  }
+function* geradora1() {
+  yield 'Valor 1';
+  yield 'Valor 2';
+  yield 'Valor 3';
 }
 
-const ct=cont(10)
-
-console.log(ct.next())
+const g1 = geradora1();
+console.log(g1.next().value);
+console.log(g1.next().value);
+console.log(g1.next().value);
 ```
 >A palavra-chave yield é usada para pausar e resumir uma generator function (function* or generator function legada).
-

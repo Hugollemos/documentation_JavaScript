@@ -29,7 +29,6 @@ for (let chave in pessoa) {
 nome
 sobrenome
 idade
-
 ```
 ### para pegar os valores das chaves
 ```
