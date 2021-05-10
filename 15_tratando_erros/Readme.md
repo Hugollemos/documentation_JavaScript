@@ -1,5 +1,5 @@
 # Tratando e lançando erros com: try, catch, finally.
->Esplicação resumida: O erro é gerado dentro (try) e passada por (catch) no catch o erro é tratado.
+>Resumo: O erro é gerado dentro (try) e passada por (catch) no catch o erro é tratado.
 
 >independente se ocorrer erro o finally é executado.
 

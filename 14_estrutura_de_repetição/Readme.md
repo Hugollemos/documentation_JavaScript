@@ -92,8 +92,17 @@ Com a instrução continue, você poderá utilizá-la para apenas ignorar  uma i
 
 >setInterval: Repete a função enquanto o intervalo existir.
 Ex:
+```
+setInterval(function() {
+  console.log("Testando o setTimeout");
 
-function iniciar(){
-  tmp=setInterval(mudacor,1000);
-}
+}, 1000);
+```
 >setTimeout: faz a chamada da função em tempo especificado.
+Ex:
+```
+setTimeout(function() {
+  console.log("Testando o setTimeout");
+
+}, 2000);
+```
