@@ -69,29 +69,6 @@ console.dir(data);
 ```
 # Herança
 
-Quando fazemos algo como:
-
-function Produto(nome, preco) {
-  this.nome = nome;
-  this.preco = preco;
-}
- 
-Produto.prototype.aumento = function (quantia) {
-  this.preco += quantia;
-};
- 
-function Camiseta(nome, preco, cor) {
-  Produto.call(this, nome, preco);
-  this.cor = cor;
-}
-Camiseta.prototype = Object.create(Produto.prototype);
-Camiseta.prototype.constructor = Camiseta;
-Mais especificamente no trecho:
-
-Camiseta.prototype = Object.create(Produto.prototype);
-Estamos, claramente, falando que o Camiseta.prototype é um novo objeto vazio que tem como protótipo Produto.prototype. Dessa forma, estamos adicionando Camiseta.prototype na cadeia de protótipos de Produto. Por consequência, tudo o que não existir em Camiseta nem em Camiseta.prototype será delegado para Produto.prototype (e assim por diante até chegar no topo da cadeia de protótipos). Por isso vejo o termo delegação como mais adequado para este comportamento.
-
-Novamente, vamos continuar usando o termo "Herança", mas achei que seria interessante que você soubesse disso neste momento.
 >O termo "Herança" é muito usado para descrever que as características de um objeto são passadas para outro objeto. 
 >Em OOP, herança refere-se a habilidade de um objeto acessar métodos e outras propriedades de outro objeto. Estes objetos então herdam essas informações de outros objetos e podem utilizá-las da forma que preferirem.
 
@@ -116,6 +93,10 @@ Camiseta.prototype.constructor = Camiseta;
 
 >Camiseta.prototype = Object.create(Produto.prototype);
 Estamos, claramente, falando que o Camiseta.prototype é um novo objeto vazio que tem como protótipo Produto.prototype. Dessa forma, estamos adicionando Camiseta.prototype na cadeia de protótipos de Produto. Por consequência, tudo o que não existir em Camiseta nem em Camiseta.prototype será delegado para Produto.prototype (e assim por diante até chegar no topo da cadeia de protótipos). Por isso vejo o termo delegação como mais adequado para este comportamento.
+
+# polimorfismo
+Polimorfismo é quando queremos que os filhos se comportem diferente dos seus pais, ou seja, temos os mesmo métodos, com os mesmos nomes mas com diferentes comportamentos.
+
 # class
 
 class Carro {
