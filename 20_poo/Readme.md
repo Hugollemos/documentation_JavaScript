@@ -1,5 +1,5 @@
 # Object.defineProperty() e Object.defineProperties()
-//defineProperty/
+__//defineProperty/__
 ```
 function Produto(nome, preco, estoque) {
   this.nome = nome;
@@ -16,7 +16,7 @@ function Produto(nome, preco, estoque) {
 const p1 = new Produto('Camiseta', 20, 3);
 console.log(p1);
 ```
-//defineProperties
+__//defineProperties__
 ```
 function Produto(nome, preco, estoque) {
   Object.defineProperty(this, 'estoque', {
@@ -48,9 +48,8 @@ console.log(p1);
 # Prototypes
 >Protótipo é o termo usado para se referir ao que foi criado pela primeira vez, servindo de modelo ou molde para futuras produções.
 
->Todos os objetos tem uma referência interna para um protótipo (__proto__) que vem da propriedade prototype da função construtora que foi usado para criá-lo. Quando tentamos acessar um membro de um objeto, primeiro o motor do JS vai tentar encontrar este membro no próprio objeto e depois a cadeia de protópipos é usada até o topo (null) até encontrar (ou não) tal membro.
+>Todos os objetos tem uma referência interna para um protótipo (__ proto __) que vem da propriedade prototype da função construtora que foi usado para criá-lo. Quando tentamos acessar um membro de um objeto, primeiro o motor do JS vai tentar encontrar este membro no próprio objeto e depois a cadeia de protópipos é usada até o topo (null) até encontrar (ou não) tal membro.
 
-```Object.prototype``` <br>
 Ex:
 ```
 function Pessoa(nome, sobrenome) {
@@ -70,7 +69,31 @@ console.dir(data);
 ```
 # Herança
 
+Quando fazemos algo como:
+
+function Produto(nome, preco) {
+  this.nome = nome;
+  this.preco = preco;
+}
+ 
+Produto.prototype.aumento = function (quantia) {
+  this.preco += quantia;
+};
+ 
+function Camiseta(nome, preco, cor) {
+  Produto.call(this, nome, preco);
+  this.cor = cor;
+}
+Camiseta.prototype = Object.create(Produto.prototype);
+Camiseta.prototype.constructor = Camiseta;
+Mais especificamente no trecho:
+
+Camiseta.prototype = Object.create(Produto.prototype);
+Estamos, claramente, falando que o Camiseta.prototype é um novo objeto vazio que tem como protótipo Produto.prototype. Dessa forma, estamos adicionando Camiseta.prototype na cadeia de protótipos de Produto. Por consequência, tudo o que não existir em Camiseta nem em Camiseta.prototype será delegado para Produto.prototype (e assim por diante até chegar no topo da cadeia de protótipos). Por isso vejo o termo delegação como mais adequado para este comportamento.
+
+Novamente, vamos continuar usando o termo "Herança", mas achei que seria interessante que você soubesse disso neste momento.
 >O termo "Herança" é muito usado para descrever que as características de um objeto são passadas para outro objeto. 
+>Em OOP, herança refere-se a habilidade de um objeto acessar métodos e outras propriedades de outro objeto. Estes objetos então herdam essas informações de outros objetos e podem utilizá-las da forma que preferirem.
 
 Ex:
 ```
