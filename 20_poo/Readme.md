@@ -1,3 +1,156 @@
+# OO (Orientação a Objetos)
+>padrão de código mais clean
+## OO - Abstração
+compreender as coisas do mundo real e trazer para dentro do sistema <br>
+Ex:
+```Entidade: ContaBancaria; Identidade: x = new ContaBancaria(); Características: agencia, numeroconta, saldo, limite; Ações: depositar, sacar, consultarSaldo.```
+```
+class ContaBancaria {
+  //agencia
+  //numeroConta
+  //saldo
+  //limite
+  constructor() {
+    this.agencia = 1075
+    this.numeroConta = 8351125
+    this.saldo = 50
+    this.limite = 450
+  }
+
+  depositar(valorDeposito) {
+    this.saldo += valorDeposito
+  }
+
+  sacar(valorSaque) {
+    this.saldo -= valorSaque
+  }
+
+  consultarSaldo() {
+    return this.saldo
+  }
+
+}
+
+let x = new ContaBancaria()
+let y = new ContaBancaria()
+
+console.log(x.consultarSaldo())
+x.depositar(450)
+console.log(x.consultarSaldo())
+x.sacar(200)
+console.log(x.consultarSaldo())
+```
+## OO - Pilar do Encapsulamento
+>Seguro e Reutilizável
+Ex:
+```
+class Tv {
+  constructor() {
+    this._relacaoCanais = Array(2, 4, 5, 7, 10)
+    this._canalAtivo = 5
+    this._volume = 5
+  }
+
+  //get e set
+  get canalAtivo() {
+    return this.canalAtivo
+  }
+
+  set canalAtivo(canal) {
+    this._canalAtivo = canal
+  }
+}
+
+let tv = new Tv()
+
+Tv.canalAtivo = 10
+console.log(Tv.canalAtivo)
+```
+## OO - Pilar da Herança
+>O termo "Herança" é muito usado para descrever que as características de um objeto são passadas para outro objeto. 
+>Em OOP, herança refere-se a habilidade de um objeto acessar métodos e outras propriedades de outro objeto. Estes objetos então herdam essas informações de outros objetos e podem utilizá-las da forma que preferirem.
+Ex:
+```
+class Animal {
+  constructor() {
+    this.cor = ''
+    this.tamanho = null
+  }
+
+  dormir() {
+    console.log('Dormir')
+  }
+}
+
+class Cachorro extends Animal {
+  constructor() {
+    super()
+    this.orelhas = 'Grandes e caidas'
+  }
+
+  correr() {
+    console.log('Correr')
+  }
+
+  dormir() {
+    console.log('Dormir')
+  }
+
+  rosnar() {
+    console.log('Rosnar')
+  }
+}
+
+class Passaro extends Animal {
+  constructor() {
+    super()
+    this.bico = 'Curto'
+  }
+
+  voar() {
+    console.log('Rosnar')
+  }
+
+  dormir() {
+    console.log('Dormir')
+  }
+}
+
+let cachorro = new Cachorro()
+let passaro = new Passaro()
+```
+# class
+uma class é um conjunto de características e comportamentos que definem o conjunto de objetos pertencentes à essa classe.
+class Carro {
+  constructor(){
+    console.log("Olá, sou um novo carro")
+  }
+}
+
+let c1=new Carro()
+
+
+>Todo objeto em js herda propriedades e metodos do seu prototype ascendente;
+
+```Object.prototype``` <br>
+Ex:
+```
+function Pessoa(nome, sobrenome) {
+  this.nome = nome;
+  this.sobrenome = sobrenome;
+  this.nomeCompleto = () => this.nome + ' ' + this.sobrenome;
+}
+
+Pessoa.prototype.estouAqui = 'HAHAHAHAH';
+
+const pessoa1 = new Pessoa('Luiz', '0.');
+const pessoa2 = new Pessoa('Maria', 'A.');
+const data = new  Date();
+
+console.dir(pessoa1);
+console.dir(data);
+```
+##
 # Object.defineProperty() e Object.defineProperties()
 __//defineProperty/__
 ```
@@ -99,34 +252,3 @@ Estamos, claramente, falando que o Camiseta.prototype é um novo objeto vazio qu
 # polimorfismo
 Polimorfismo é quando queremos que os filhos se comportem diferente dos seus pais, ou seja, temos os mesmo métodos, com os mesmos nomes mas com diferentes comportamentos.
 
-# class
-
-class Carro {
-  constructor(){
-    console.log("Olá, sou um novo carro")
-  }
-}
-
-let c1=new Carro()
-
-
->Todo objeto em js herda propriedades e metodos do seu prototype ascendente;
-
-```Object.prototype``` <br>
-Ex:
-```
-function Pessoa(nome, sobrenome) {
-  this.nome = nome;
-  this.sobrenome = sobrenome;
-  this.nomeCompleto = () => this.nome + ' ' + this.sobrenome;
-}
-
-Pessoa.prototype.estouAqui = 'HAHAHAHAH';
-
-const pessoa1 = new Pessoa('Luiz', '0.');
-const pessoa2 = new Pessoa('Maria', 'A.');
-const data = new  Date();
-
-console.dir(pessoa1);
-console.dir(data);
-```

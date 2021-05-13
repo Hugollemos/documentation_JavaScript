@@ -262,7 +262,7 @@ var obj = {
 > OBS: começa com letra maiscula
 Ex:
 ```
-const soma=new Function("n1,n2","return n1 + n2")
+const soma= new Function("n1,n2","return n1 + n2")
 console.log(soma(8,2))
 ```
 # função recursiva 
