@@ -28,7 +28,6 @@ class ContaBancaria {
   consultarSaldo() {
     return this.saldo
   }
-
 }
 
 let x = new ContaBancaria()
@@ -119,6 +118,13 @@ class Passaro extends Animal {
 let cachorro = new Cachorro()
 let passaro = new Passaro()
 ```
+## OO - Pilar do Polimorfismo
+>Sobreescrita de métodos
+
+>Polimorfismo é quando queremos que os filhos se comportem diferente dos seus pais, ou seja, temos os mesmo métodos, com os mesmos nomes mas com diferentes comportamentos.
+
+
+
 # class
 uma class é um conjunto de características e comportamentos que definem o conjunto de objetos pertencentes à essa classe.
 class Carro {
@@ -249,6 +255,27 @@ Camiseta.prototype.constructor = Camiseta;
 >Camiseta.prototype = Object.create(Produto.prototype);
 Estamos, claramente, falando que o Camiseta.prototype é um novo objeto vazio que tem como protótipo Produto.prototype. Dessa forma, estamos adicionando Camiseta.prototype na cadeia de protótipos de Produto. Por consequência, tudo o que não existir em Camiseta nem em Camiseta.prototype será delegado para Produto.prototype (e assim por diante até chegar no topo da cadeia de protótipos). Por isso vejo o termo delegação como mais adequado para este comportamento.
 
-# polimorfismo
-Polimorfismo é quando queremos que os filhos se comportem diferente dos seus pais, ou seja, temos os mesmo métodos, com os mesmos nomes mas com diferentes comportamentos.
 
+
+# Getters e Setters
+As classes JavaScript contam com dois métodos especiais: um com o prefixo <b>get</b> que tem a função de retornar um valor, e outro precedido pela palavra <b>set</b> que serve para atribuir um valor.
+get para obter o valor
+```
+car obg = {
+  get v(){
+    return 5;
+  }
+}
+```
+```
+var _v = 0;
+
+var obj = {
+  get v(){
+    return 'Value:' + _v;
+  },
+  set v(value){
+    _v = value * 2;
+  }
+}
+```
