@@ -229,28 +229,6 @@ var soma = (a, b) => {
 console.log(soma(10, 10))
 ```
 
-# Getters e Setters
-As classes JavaScript contam com dois métodos especiais: um com o prefixo <b>get</b> que tem a função de retornar um valor, e outro precedido pela palavra <b>set</b> que serve para atribuir um valor.
-get para obter o valor
-```
-car obg = {
-  get v(){
-    return 5;
-  }
-}
-```
-```
-var _v = 0;
-
-var obj = {
-  get v(){
-    return 'Value:' + _v;
-  },
-  set v(value){
-    _v = value * 2;
-  }
-}
-```
 # Função Construtora
 
 >A diferença básica é que uma função construtora é usada com a new palavra - chave (que faz com que o JavaScript crie automaticamente um novo objeto.
