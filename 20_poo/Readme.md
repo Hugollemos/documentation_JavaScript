@@ -123,8 +123,6 @@ let passaro = new Passaro()
 
 >Polimorfismo é quando queremos que os filhos se comportem diferente dos seus pais, ou seja, temos os mesmo métodos, com os mesmos nomes mas com diferentes comportamentos.
 
-
-
 # class
 uma class é um conjunto de características e comportamentos que definem o conjunto de objetos pertencentes à essa classe.
 class Carro {
@@ -134,7 +132,6 @@ class Carro {
 }
 
 let c1=new Carro()
-
 
 >Todo objeto em js herda propriedades e metodos do seu prototype ascendente;
 
@@ -156,7 +153,6 @@ const data = new  Date();
 console.dir(pessoa1);
 console.dir(data);
 ```
-##
 # Object.defineProperty() e Object.defineProperties()
 __//defineProperty/__
 ```
@@ -254,8 +250,6 @@ Camiseta.prototype.constructor = Camiseta;
 
 >Camiseta.prototype = Object.create(Produto.prototype);
 Estamos, claramente, falando que o Camiseta.prototype é um novo objeto vazio que tem como protótipo Produto.prototype. Dessa forma, estamos adicionando Camiseta.prototype na cadeia de protótipos de Produto. Por consequência, tudo o que não existir em Camiseta nem em Camiseta.prototype será delegado para Produto.prototype (e assim por diante até chegar no topo da cadeia de protótipos). Por isso vejo o termo delegação como mais adequado para este comportamento.
-
-
 
 # Getters e Setters
 As classes JavaScript contam com dois métodos especiais: um com o prefixo <b>get</b> que tem a função de retornar um valor, e outro precedido pela palavra <b>set</b> que serve para atribuir um valor.
