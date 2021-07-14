@@ -1,5 +1,5 @@
 # Objeto Math: conceitos básicos
->A função Math.max() retorna o maior de um ou mais números.
+
 #### temos let num1 = 9.6548430 
 para arredondar para baixo 
 exemplo
@@ -27,13 +27,13 @@ let num1 = 9.51;
 let2 num2 = Math.round(num1);
 console.log(num2);
 ```
->para escolher o maior número de uma seguência 
+__para escolher o maior número de uma seguência__
 ```console.log(Math.max(1, 2,4, -5, -8, 15000, 0, 6))```
 
->para escolher o menor número de uma seguência 
+__para escolher o menor número de uma seguência__
 ```console.log(Math.min(1, 2,4, -5, -8, 15000, 0, 6))```
 
->math.random() me volta números aleatorios <br>
+__math.random() me volta números aleatorios__ <br>
 ```
 const aleatorio = Math.random();
 console.log(aleatorio);

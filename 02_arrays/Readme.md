@@ -1,22 +1,24 @@
 # Arrays
- >serve para guarda valores em uma única variável, uma "lista de coisas". [ ] <br>
-
+ __serve para guarda valores em uma única variável, uma "lista de coisas". [ ]__<br>
 Ex:
  ``` const alunos = ['Hugo', 'elon', 'bill']; ```
 
->cada Array é indexado, para acessar algum array usar-se: ```console.log(alunos[n])```
+__cada Array é indexado, para acessar algum array usar-se:__ ```console.log(alunos[n])```
 
-Separa os arrays: ```alunos.join:``` <br>
-tira uma parte do array "fatia": ```alunos.slice()``` <br>
-tamanho do array: ```alunos.length``` <br>
-para retirar um array do final: ``` alunos.pop();``` <br>
-para adicionar um array no final: ``` alunos.push('nome');``` <br>
-para adicionar um array no começo: ``` alunos.unshift('nome')``` <Br>
-Fatiar: selecionar um grupo de arrays específicos ``` console.log(alunos.slice(0,2))```
+## Acessando arrays
+
+__Separa os arrays:__ ```alunos.join:``` <br>
+__tira uma parte do array "fatia"__: ```alunos.slice()``` <br>
+__tamanho do array:__```alunos.length``` <br>
+__para retirar um array do final:__ ``` alunos.pop();``` <br>
+__para adicionar um array no final:__ ``` alunos.push('nome');``` <br>
+__para adicionar um array no começo:__ ``` alunos.unshift('nome')``` <Br>
+__Fatiar: selecionar um grupo de arrays específicos__```console.log(alunos.slice(0,2))```
 
 # Método Splice
-
-```nomes.slice(índice, delete, elemente, elem1, elem2, elem3);```
+```
+nomes.slice(índice, delete, elemente, elem1, elem2, elem3);```
+```
 ```
 const nomes = ['Maria', 'João', 'Eduardo', 'Gabriel', 'Júlia'];
 nomes.splice(4,1); //retirado o índice 4, segundo parametrô quantos elementos.
@@ -80,6 +82,7 @@ const total = numeros.reduce(function(acumulador, valor, indice, array){
   acumulador += valor;
   return acumulador;
 }, 0);
+
 console.log(total);
 ```
 # ForEach
@@ -94,4 +97,37 @@ a1.forEach(valor => {
 });
 
 console.log(total);
+```
+# Find
+Ex:
+```
+ var victor = {
+  nome: "victor Lima",
+  empresa: "Guia do programador"
+}
+
+var david = {
+  nome: "David",
+  empresa: "umbler"
+}
+
+var erik = {
+  nome: "Eril fig",
+  empresa: "udemy"
+}
+
+var users = [victor, david, erik];
+
+var usuario = users.find(user => user.nome == "victor Lima");
+
+console.log(usuario);
+```
+
+### includes 
+O método includes() determina se um array contém um determinado elemento, retornando true ou false apropriadamente.
+Ex: 
+```
+let curso="Estudo"
+let c = "tu"
+console.log(curso.includes(c) ? "verdadeiro" : "falso")
 ```

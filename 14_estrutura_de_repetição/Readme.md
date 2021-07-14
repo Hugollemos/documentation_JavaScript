@@ -1,7 +1,6 @@
 # Estruturas de repetições
 
 ## 1. For clássico 
-> geralmente com iteráveis (array ou strings) <br>
 
 Ex:
 ```
@@ -14,7 +13,7 @@ for (let i = 0; i <= 10; i++) {
 > percorrer atributos de um objeto
 
 Ex:
->para ter as chaves
+_para ter as chaves_
 ```
 const pessoa = {
   nome: 'Hugo',
@@ -30,7 +29,7 @@ nome
 sobrenome
 idade
 ```
-### para pegar os valores das chaves
+_para pegar os valores das chaves_
 ```
 const pessoa = {
   nome: 'Hugo',
@@ -81,11 +80,11 @@ do {
 }while (contador<10);
 ```
 BREAK:
-O comando “break” serve para encerrar a leitura. O break é um comando que podemos utilizar quando queremos parar/encerrar o laço de repetição na hora.
+__O comando “break” serve para encerrar a leitura. O break é um comando que podemos utilizar quando queremos parar/encerrar o laço de repetição na hora.__
 
-CONTINUE:
-Com este comando, é possível iniciar a próxima repetição do loop. 
-Com a instrução continue, você poderá utilizá-la para apenas ignorar  uma iteração de loop.
+CONTINUE: 
+__Com este comando, é possível iniciar a próxima repetição do loop. 
+Com a instrução continue, você poderá utilizá-la para apenas ignorar  uma iteração de loop.__
 
 # setInterval e setTimeout
 

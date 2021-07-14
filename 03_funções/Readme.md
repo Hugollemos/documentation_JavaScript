@@ -1,5 +1,5 @@
 # funções: conceitos básicos
->funções executam blocos de códigos, recebem ou não argumentos para os parâmetros os parâmetros. Usar-se a palavra reservada "function" para iniciar uma função.
+*funções executam blocos de códigos, recebem ou não argumentos para os parâmetros. Usar-se a palavra reservada "function" para iniciar uma função.* <br>
 Ex:
 ```
 function saudacao(nome) {
@@ -9,17 +9,14 @@ function saudacao(nome) {
 let variavel = saudacao('hugo')
 console.log(variavel)
 ```
-# Função que retorna uma soma, mandando argumentos para o parametrô da função
-
+__Ex de funçãoque retorna uma soma, mandando argumentos para o parametrô da função.__
+```
 function soma (x, y) {
   const resultado = x + y;
   return resultado;
 }
-
 console.log(soma(2,4))
-
->colocar um função dentro de uma variavel, faz com que a função seja, anônima.
-
+```
 #### Arrow Functions: declarar funções encurtadas.
 1. maneira tradicional; 
 ```
@@ -27,17 +24,18 @@ const raiz = function (n) {
   return n ** 0.5; <br>
 }
  ```
- 2. maneira mais mordena de fazer funções 
+ 2. maneira encurtada de criar funções:
  ```
 const raiz = (n) => { 
   return n ** 0.5 <br>
 }
 console.log(raiz(9));
 ```
+*Caso a função tenha um parâmetro só, podemos criar desse modo.*
 ```const raiz = n => n ** 0.5;```
 
 # função auto-executável
->Função anônima é uma função sem nome
+Obs: Função anônima é uma função sem nome.
 ```
 (function autoExecuta() {
   console.log('Executei');
@@ -61,19 +59,17 @@ exibeMensagensNaOrdem('Essa é a primeira mensagem exibida na ordem', function()
 	console.log('Essa é a segunda mensagem exibida na ordem');
 });
 ```
-
 Ex:
-### não passando argumentos para afunção 
+### não passando argumentos para a função: 
 ```
 function escreveNome(nome,idade) {
   console.log(nome);
   console.log(idade)
 }
-
 escreveNome();
 ``` 
 # Funções imediatas (IIFE)
->“Immediately-invoked function expression”.
+>“Immediately-invoked function expression”. <br>
 Ex:
 ```
 (function(idade, peso, altura) {
@@ -93,7 +89,7 @@ Ex:
 })(30, 80, 1.80);
 ``` 
 ## Argumentos
->ão passando argumentos, o valor retornado sera "undefined", mas é possivel deixar o valor padão pre-definido dentro de parametrôs, como se estivesse passado argumentos, dessa forma:
+>não passando argumentos, o valor retornado sera "undefined", mas é possivel deixar o valor padão pre-definido dentro de parametrôs, como se estivesse passado argumentos, dessa forma:
 
 Ex:
 ```
@@ -108,7 +104,7 @@ escreveNome();
 # Fábrica de funções 
 > função que retorna objetos
 
->OBS: método função que esta dentro do objeto 
+>OBS: método função que esta dentro do objeto <br>
 Ex:
 ```
 function criaPessoa(nome, sobrenome) {
@@ -124,7 +120,7 @@ function criaPessoa(nome, sobrenome) {
 const p1 = criaPessoa('Luiz', 'Otávio');
 console.log(p1.fala('falando sobre JS'));
 ```
-COM THIS
+__COM THIS__
 ```
 function criaPessoa(nome, sobrenome) {
   return {
@@ -140,33 +136,7 @@ function criaPessoa(nome, sobrenome) {
 const p1 = criaPessoa('Luiz', 'Otávio');
 console.log(p1.fala('falando sobre JS'));
 ```
-# this 
->função executada com new retorna this <br> 
->this depende muito do contexto a onde ele é executado.
 
-nesta forma this assume escopo global <br>
-Ex:
-```
-function Usuario() {
-
-  console.log(this)
-}
-
-Usuario();
-``` 
->função executada com new retorna this como objeto da função. <br>
-Ex:
-```
-function Usuario() {
-
-  console.log(this)
-}
-
- new Usuario();
-
-
-Usuario {}
-```
 # call
 O método call() é uma função capaz de alterar o valor this. Por padrão, o primeiro parâmetro que recebe o valor do this e o demais parâmetros são da função que invoca o método Call.
 Ex:
@@ -219,16 +189,6 @@ function Personagem(p1, p2, p3) {
   var pers = Personagem.bind(personagemThis, 'olá') 
   pers ('Mundo', '!!!');
 ```
-# Arrow functions:
-não possuem um escopo para o this. Em vez disso, elas passam para um próximo nível de execução. <br>
-Ex: 
-```
-var soma = (a, b) => {
-  return a + b;
-}
-console.log(soma(10, 10))
-```
-
 # Função Construtora
 
 >A diferença básica é que uma função construtora é usada com a new palavra - chave (que faz com que o JavaScript crie automaticamente um novo objeto.

@@ -1,6 +1,6 @@
 # Desestruturação com arrays
 >Serve para extrair dados de um array e apresenta-los de maneiras mais curta. <br>
-### Atribuição normal
+# Atribuição normal
 Ex:
 ```
 const usuario = ['Hugo',21,2021,'Maracanaú'];
@@ -14,7 +14,7 @@ console.log(nome, idade, ano, cidade);
 
 Hugo 21 2021 Maracanaú
 ```
-### Com a Desestruturação
+# Com Desestruturação
 Ex:
 ```
 const usuario = ['Hugo',21,2021,'Maracanaú'];
@@ -22,10 +22,10 @@ const usuario = ['Hugo',21,2021,'Maracanaú'];
 var [nome, idade , ano, cidade] = usuario
 console.log(nome, idade, ano, cidade);
 
-Hugo 21 2021 Maracanaú
+Saída: Hugo 21 2021 Maracanaú
 ```
 # Desestruturação de Objetos
->Serve para extrair dados de um Objeto e apresenta-los de maneiras mais curta. <br>
+
 ### Atribuição normal
 Ex:
 ```
@@ -42,7 +42,7 @@ const pessoa = {
 const nome = pessoa.nome;
 console.log(nome);
 ```
-### Com a Desestruturação
+### Com Desestruturação
 Ex:
 ```
 const pessoa = {

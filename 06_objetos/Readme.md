@@ -18,13 +18,13 @@ console.log(pessoa);
 
 ```console.log(pessoa['nome']);``` <br>
 ### 2. criando uma chave separada por hifen ```ultimo-nome```, precisa-se ser colocada entre aspas ```'ultimo-nome'``` <br>
-para imprimir precisa-se colocar entre conchetes e aspas.
+__para imprimir precisa-se colocar entre conchetes e aspas.__
 ```console.log(usuario.['ultimo-nome']);```
 
-### 3. Adicionando uma nova variavel
+### 3. Adicionando uma nova variavel.
 ```pessoa.ano = 2021```
 
-### 4. Apagando uma propriedade
+### 4. Apagando uma propriedade.
 ```delete pessoa.idade;```
 
 ### 5. maneira mais curta de criar uma função dentro de um objeto:
@@ -45,7 +45,7 @@ var usuario03 = {
 }
 ```
 ### 7. object.assign()
-Criando um novo objeto ou alterando um que já exista, a apartir de outros objetos.
+__Criando um novo objeto ou alterando um que já exista, a apartir de outros objetos.__
 
 passando {} vazias para criar um objeto novo. <br>
 Ex:
@@ -76,10 +76,8 @@ var novouser = {
 };
 console.log(novouser)
 ```
-### 9. getters e setters
 
-As classes JavaScript contam com dois métodos especiais: um com o prefixo get que tem a função de retornar um valor, e outro precedido pela palavra set que serve para atribuir um valor.
-### 10. destructuring
+### 9. destructuring
 
 ### Extraindo valores do objeto e armazenando em uma variavel:
 *Forma tradicional:*
@@ -100,13 +98,13 @@ Ex:
 var {idade, nome} = usuario;
 console.log(idade, nome);
 ```
->10.1 extraindo a propriedade nome do novoUsuario2 e armazenando na variavel segundoNome.
+>9.1 extraindo a propriedade nome do novoUsuario2 e armazenando na variavel segundoNome.
 Ex:
 ```
 var {nome: segundoNome} = usuario;
 console.log(segundoNome);
 ```
->10.2 Extraindo o valor de um objeto que está dentro de dois objetos
+>9.2 Extraindo o valor de um objeto que está dentro de dois objetos
 Ex:
 ```
 var novoUsuario2 = {
@@ -120,7 +118,7 @@ var {nome: {primeiro}} = novoUsuario2;
 console.log(primeiro);
 ```
 
-### 11. Destructuring com default value
+### 10. Destructuring com default value
 Deixando um valor já pre-definido caso não tenha na propriedade do objeto.
 Ex:
 ```
@@ -133,7 +131,7 @@ var {nome: {ultimo = 'lemos'}} = novoUsuario2;
 console.log(ultimo);
 ```
 
-### 12. Destructuring como parâmetro de function
+### 11. Destructuring como parâmetro de function
 Ex:
 ```
 function imprimir (valor) {
@@ -165,7 +163,7 @@ var usuario = {
 
 imprimir(usuario);
 ```
-### 13. Object.keys e Objects.values.
+### 12. Object.keys e Objects.values.
 >Devolve um array com todas as chaves de um objeto
 ```console.log(Object.keys(usuario));```
 
@@ -195,12 +193,12 @@ for(let chave in p1) {
 }
 ```
 
-```Object.values``` (retorna um array cujos elementos são os valores das propriedades enumeradas encontradas no objeto.<br>
-```Object.entries``` (retorna um array cujos elementos são também arrays correspondentes aos pares de propriedades [key, value] enumeráveis encontrados diretamente sobre o objeto.<br>
-```Object.assign(des, any)``` (é usado para copiar os valores de todas as propriedades próprias enumeráveis de um ou mais objetos de origem para um objeto destino.) <br>
-```Object.getOwnpropertyDescriptor(o, 'prop')``` ( retorna um descritor de propriedades para uma propriedade (isto é, uma diretamente presente, e não pertencente ao objeto por força da cadeia de protótipo do objeto) de um dado objeto.)
+```Object.values``` __(retorna um array cujos elementos são os valores das propriedades enumeradas encontradas no objeto.__<br>
+```Object.entries``` __(retorna um array cujos elementos são também arrays correspondentes aos pares de propriedades [key, value] enumeráveis encontrados diretamente sobre o objeto.__<br>
+```Object.assign(des, any)``` __(é usado para copiar os valores de todas as propriedades próprias enumeráveis de um ou mais objetos de origem para um objeto destino.)__ <br>
+```Object.getOwnpropertyDescriptor(o, 'prop')``` __( retorna um descritor de propriedades para uma propriedade (isto é, uma diretamente presente, e não pertencente ao objeto por força da cadeia de protótipo do objeto) de um dado objeto.)__
 
-```Object.keys``` (retorna as chaves) <br>
-```Object.freeze``` (congela o objeto)<br>
-```Object.definePrperties``` (define várias propriedades) <br>
-```Obeject.defineProperty``` (define uma propriedade)
+```Object.keys``` __(retorna as chaves)__ <br>
+```Object.freeze``` __(congela o objeto)__<br>
+```Object.definePrperties``` __(define várias propriedades)__<br>
+```Obeject.defineProperty``` __(define uma propriedade)__
