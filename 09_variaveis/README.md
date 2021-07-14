@@ -27,14 +27,6 @@ array = 'Legal'; // Assignment to constant variable.
 exemplo com erro:
 exemplo com objeto:
 ```
-```
-const a = {nome: "Igor"};
-a.nome = "José"
-console.log(a)
-```
-
-##### Comando "console.log()" quando é executado fora do escopo da constante da em erro.<br>
-
 exemplo:
 ```
 if(true) {
